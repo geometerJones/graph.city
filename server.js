@@ -114,6 +114,10 @@ app.use((req, res, next) => {
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static("client/build"));
+}
+
 /**
  * Primary app routes.
  */

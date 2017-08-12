@@ -112,7 +112,7 @@ app.use((req, res, next) => {
   }
   next();
 });
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
+//app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static("client/build"));

@@ -114,10 +114,10 @@ app.use((req, res, next) => {
 });
 //app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
 
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join("./client/build")));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build/", "index.html"));
+  res.sendFile(path.join("./client/build/index.html"));
 });
 
 /**
